@@ -1,3 +1,4 @@
+// String
 // Получить первую и последнюю буквы строки.
 let string = 'some test string';
 console.log(`first letter is: ${string[0]}.last letter is: ${string[string.length -1]}`);
@@ -16,6 +17,7 @@ console.log(string.slice(0, -6));
 // из двух переменных a = 20, b = 19 получить переменную, в которой будет содержаться строка '2019'
 let a = 20, b = 19;
 console.log(a.toString() + b);
+// Number
 // получить число pi из Math и округлить его до 2-ух знаков после точки
 console.log(Math.PI.toFixed(2));
 // Используя Math, найти максимальное и минимальное числа из ряда 15, 11, 16, 12, 51, 12, 13, 51
@@ -28,3 +30,16 @@ console.log(Math.random() * 10);
 console.log(((0.6 * 10) + (0.7 * 10)) / 10);
 // Получить число из строки '100$'
 console.log(parseInt('100$'));
+// Obj
+// создать объект product с полем, равным iphone;
+const phone = {
+  product: 'iphone',
+};
+// Добавить поля price = 1000 и currency = 'dollar'
+phone.price = 1000;
+phone.currency = 'dollar';
+// добавить поле details, которое будет содержать объект с полями model и color
+phone.details = {};
+phone.details.model = '10';
+phone.details.color = 'red';
+console.log(phone);
