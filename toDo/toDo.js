@@ -4,6 +4,7 @@ let tasks = [
   'task 3'
 ];
 let taskList = document.querySelector('.list-group');
+let showMessageDiv = document.querySelector('.todo-hide');
 
 function generateTaskList(tasks) {
   for (let i = 0; i < tasks.length; i++) {
@@ -19,4 +20,9 @@ function generateTaskListItem(task) {
 generateTaskList(tasks);
 function addTask(task) {
   taskList.appendChild(generateTaskListItem(task));
+}
+function showMessage(msg) {
+  showMessageDiv.classList.add('alert', 'alert-info', 'todo-show');
+  showMessageDiv.innerText = msg;
+  setTimeout(() => showMessageDiv.classList.remove('alert', 'alert-info', 'todo-show'), 3000);
 }
